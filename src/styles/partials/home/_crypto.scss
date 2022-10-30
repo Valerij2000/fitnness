@@ -1,0 +1,38 @@
+.crypto {
+  @include bg-theme;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    @media (max-width:$tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__container {
+    flex-basis: 40%;
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+  }
+
+  &__description {
+    @include description;
+  }
+
+  &__title {
+    @include title;
+    @include mb(36);
+  }
+
+  &__bg {
+    max-width: rem(450);
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+
+    @media (max-width:$tablet) {
+      max-width: 70%;
+    }
+  }
+}

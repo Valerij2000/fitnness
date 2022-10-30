@@ -1,0 +1,26 @@
+@mixin flex-gap($gap, $row: true) {
+  $margin: math.div($gap, 2);
+  $transform: -$margin;
+
+  @if $row {
+    margin-left: $transform;
+    margin-right: $transform;
+  }
+
+  @else {
+    margin-top: $transform;
+    margin-bottom: $transform;
+  }
+
+  >* {
+    @if $row {
+      margin-left: $margin;
+      margin-right: $margin;
+    }
+
+    @else {
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }
+  }
+}

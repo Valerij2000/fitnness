@@ -1,0 +1,78 @@
+.home-page {
+  .main {
+    &__wrapper {
+      position: relative;
+      padding-top: 110px;
+      min-height: rem(864);
+      background-color: rgba(218, 196, 255, 0.4);
+
+      @media (max-width:$mobile) {
+        min-height: auto;
+        padding-top: 60px;
+        padding-bottom: rem(80);
+      }
+    }
+
+    &__bg {
+      position: absolute;
+      right: 0px;
+      top: 35px;
+      @include adaptiveValue("max-width", 790, 400);
+
+      @media (max-width: em(1400)) {
+        z-index: -1;
+      }
+
+      @media (max-width:$mobile) {
+        display: none;
+      }
+    }
+
+    &__description {
+      max-width: rem(743);
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 120%;
+      color: $greyColor;
+      @include mb(60);
+
+      @media (max-width:$pc) {
+        color: $blackColor;
+      }
+
+      @media (max-width:$mobile) {
+        font-size: 18px;
+        line-height: 110%;
+      }
+    }
+
+    &__img {
+      @include adaptiveValue("max-width", 221, 112);
+    }
+
+    &__title {
+      max-width: rem(488);
+      font-family: 'Fredoka';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 64px;
+      line-height: 120%;
+      text-transform: uppercase;
+      color: $mainColor;
+      @include mb(36);
+
+
+      @media (max-width:$mobile) {
+        font-size: 45px;
+        line-height: 120%;
+      }
+
+      @media (max-width:$mobileSmall) {
+        font-size: 32px;
+        line-height: 120%;
+      }
+    }
+  }
+}

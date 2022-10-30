@@ -1,0 +1,17 @@
+// Common Styles and Blocks
+
+html {
+  scroll-behavior: smooth;
+}
+
+.button {
+  @include button;
+}
+
+.pink-color {
+  color: $pinkColor;
+}
+
+.grey-color {
+  color: $greyColor;
+}

@@ -1,0 +1,52 @@
+.outline {
+  @include bg-theme;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media (max-width:$tablet) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__content {
+    max-width: rem(672);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__description {
+    @include description;
+    text-transform: uppercase;
+    text-align: left;
+    @include mb(24);
+  }
+
+  &__text {
+    display: block;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    @include mb(22);
+
+    @media (max-width:$mobile) {
+      font-size: rem(22);
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width:$tablet) {
+      flex-direction: column;
+      @include flex-gap(20px, false);
+    }
+  }
+
+  &__title {
+    @include title;
+    @include mb(36);
+  }
+}

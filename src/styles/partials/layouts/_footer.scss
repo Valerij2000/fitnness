@@ -1,0 +1,103 @@
+.footer {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url('@img/bg/background-footer.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% center;
+    background-color: rgba(201, 156, 255, 0.113);
+    min-height: rem(700);
+    @include adaptiveValue("padding-bottom", 88, 44);
+
+    @media (min-width: em(2400)) {
+      min-height: em(1200);
+    }
+
+    @media (max-width:$mobile) {
+      background-position: 100%;
+      background-image: none;
+      min-height: auto;
+      padding-top: rem(100);
+      background-image: url('@img/bg/background-liner.png');
+    }
+  }
+
+  &__inner {
+    width: 136%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media (max-width: em(1600)) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include title;
+    color: $whiteColor;
+    @include mb(54);
+  }
+
+  &__description {
+    max-width: rem(883);
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 120%;
+    text-align: right;
+    color: $whiteColor;
+    @include mb(40);
+
+    @media (max-width:$mobile) {
+      font-size: 18px;
+    }
+  }
+
+  &__small-text {
+    max-width: rem(526);
+    @include description;
+    text-align: right;
+    color: $whiteColor;
+  }
+}
+
+.form {
+
+  &__wrapper {
+    display: flex;
+    @include flex-gap(32px);
+    @include mb(40);
+
+    @media (max-width:$tablet) {
+      flex-direction: column;
+      align-items: flex-end;
+      @include flex-gap(32px, false);
+    }
+  }
+
+  &__input {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.08em;
+    color: $whiteColor;
+    border: 1px solid #FFFFFF;
+    padding: rem(16) rem(20);
+    border-radius: 30px;
+    outline: none;
+    background: transparent;
+    min-width: em(337);
+
+    &::placeholder {
+      color: $whiteColor;
+    }
+
+    @media (max-width:$mobile) {
+      min-width: 100%;
+    }
+  }
+}

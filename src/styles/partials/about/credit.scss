@@ -1,0 +1,27 @@
+.credit {
+  @include bg-theme;
+  padding-top: rem(80);
+  padding-bottom: rem(80);
+
+  @media (max-width:$mobile) {
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+  }
+
+  &__img {
+    max-width: rem(600);
+    width: 100%;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    max-width: rem(705);
+    @include title;
+    @include mb(60);
+  }
+}

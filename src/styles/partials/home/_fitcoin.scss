@@ -1,0 +1,32 @@
+.fitcoin {
+
+  @include bg-theme;
+
+  &__container {
+    max-width: rem(743);
+    padding-top: rem(40);
+    @include adaptiveValue("padding-bottom", 101, 40);
+  }
+
+  &__img {
+    @include mb(56);
+  }
+
+  &__description {
+    @include description;
+    @include mb(36);
+  }
+
+  &__intro {
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    @include mb(20);
+  }
+
+  &__title {
+    @include title;
+  }
+}
